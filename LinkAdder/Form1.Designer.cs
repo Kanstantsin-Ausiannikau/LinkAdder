@@ -33,6 +33,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnOpenDay = new System.Windows.Forms.Button();
             this.btnSetLinks = new System.Windows.Forms.Button();
+            this.btnSetLinksNewVer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -84,11 +85,22 @@
             this.btnSetLinks.UseVisualStyleBackColor = true;
             this.btnSetLinks.Click += new System.EventHandler(this.btnSetLinks_Click);
             // 
+            // btnSetLinksNewVer
+            // 
+            this.btnSetLinksNewVer.Location = new System.Drawing.Point(750, 41);
+            this.btnSetLinksNewVer.Name = "btnSetLinksNewVer";
+            this.btnSetLinksNewVer.Size = new System.Drawing.Size(109, 23);
+            this.btnSetLinksNewVer.TabIndex = 5;
+            this.btnSetLinksNewVer.Text = "Set Links 2016";
+            this.btnSetLinksNewVer.UseVisualStyleBackColor = true;
+            this.btnSetLinksNewVer.Click += new System.EventHandler(this.btnSetLinksNewVer_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(871, 337);
+            this.Controls.Add(this.btnSetLinksNewVer);
             this.Controls.Add(this.btnSetLinks);
             this.Controls.Add(this.btnOpenDay);
             this.Controls.Add(this.textBox1);
@@ -108,6 +120,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnOpenDay;
         private System.Windows.Forms.Button btnSetLinks;
+        private System.Windows.Forms.Button btnSetLinksNewVer;
     }
 }
 

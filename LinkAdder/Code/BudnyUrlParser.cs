@@ -162,55 +162,12 @@ namespace LinkAdder.Code
                 else
                 {
                     link.SetAttribute("href", (string)hash[href]);
-                    //Log.Write(href + ";" + (string)hash[href]);
+                    Log.Write(href + ";" + (string)hash[href]);
                 }
-
-                //if (href[0]=='/')
-                //{
-                //    continue;
-                //}
-
-
             }
 
-            Data.UpdateArticleText(articleID, HtmlToString(document.Body.InnerHtml));
+           ////////////////////////////////////////////// Data.UpdateArticleText(articleID, HtmlToString(document.Body.InnerHtml));
 
-
-            //foreach (IElement element in document.QuerySelectorAll("ul"))
-            //{
-            //    var collections = element.GetElementsByTagName("li");
-
-            //    l.AddRange(collections);
-            //}
-
-            ////List<AngleSharp.Dom.Collections.> linkListFromVuzes = new List<HtmlElementCollection>();
-
-            //ArrayList list = new ArrayList();
-
-            //foreach (IElement element in l)
-            //{
-            //    var r = element.GetElementsByTagName("a");
-
-            //    if (r.Length > 0)
-            //    {
-
-            //        list.Add(r);
-
-            //        var p = document.CreateElement("a");
-            //        p.SetAttribute("href", "/spsearch/fakeaddr");
-            //        p.TextContent = "fake link";
-
-
-            //        //var p = document.CreateElement("p");
-            //        //p.TextContent = "This is another paragraph.";
-
-
-
-            //        r[r.Length - 1].After(p);
-            //        //        var t = element.InnerHtml.Substring(0, element.InnerHtml.IndexOf('<')-1);
-            //        MessageBox.Show("");
-            //    }
-            //}
         }
 
         public static void SetLinksToSpeciality(int articleID, Hashtable links)

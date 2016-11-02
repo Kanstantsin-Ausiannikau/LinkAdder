@@ -10,6 +10,9 @@ namespace LinkAdder.Code
 {
     class Data
     {//Data Source=w05.hosterby.com;Initial Catalog=budnyby_test;User ID=budnyby_admin;Password=dthtcthtdta1!
+
+
+
         public static SqlConnection connection = new SqlConnection(@"Data Source=w05.hosterby.com;Initial Catalog=budnyby_test;User ID=budnyby_admin;Password=dthtcthtdta1!");
 
         public static List<int> GetArticlesFromCategoryID(int id)
@@ -106,10 +109,11 @@ namespace LinkAdder.Code
         }
 
         public static bool IsOldUrlStringFormat(string url)
-        {
+        {           
+
            // connection.Open();
 
-            SqlCommand articleIDCommand = new SqlCommand("SELECT ArticleID FROM EasyDNNnewsUrlNewProviderData WHERE linktitle='" +
+            SqlCommand articleIDCommand = new SqlCommand("SELECT TOP 1 ArticleID FROM EasyDNNnewsUrlNewProviderData WHERE linktitle='" +
                 url + "'", connection);
 
             articleIDCommand.CommandTimeout = 1000000;

@@ -131,5 +131,22 @@ namespace LinkAdder
             Data.connection.Close();
 
         }
+
+        private void btnSetLinksNewVer_Click(object sender, EventArgs e)
+        {
+            const int SPECIALITY_CATEGORY_ID = 29;
+            const int VUZ_CATEGORY_ID = 5;
+
+            Data.connection.Open();
+
+            var articles = Data.GetArticlesFromCategoryID(SPECIALITY_CATEGORY_ID);
+
+            articles.AddRange(Data.GetArticlesFromCategoryID(VUZ_CATEGORY_ID));
+
+
+
+
+            Data.connection.Close();
+        }
     }
 }
